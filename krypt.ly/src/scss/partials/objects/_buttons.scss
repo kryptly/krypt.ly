@@ -1,0 +1,25 @@
+/**
+    _buttons.scss
+
+    This files contains the styling for all the buttons used on the website.
+
+    Index:
+    - btn                       (Base styling)
+    - btn__primrary             (Primary button styling)
+    - btn__secondary            (Secondary button styling)
+*/
+
+@import '../variables/_colors.scss';
+
+.btn{
+    font-size: 1.6rem;
+    padding: 1rem;
+
+
+    &__primary{
+        color: $color-white;
+    }
+    &__secondary{
+        color: $color-black;
+    }
+}

@@ -1,0 +1,93 @@
+@charset 'utf-8';
+/**
+    Base
+*/
+@import '~scss/partials/base/_reset.scss';
+
+/**
+    Variables
+*/
+@import '~scss/partials/variables/_colors.scss';
+@import '~scss/partials/variables/_fonts.scss';
+
+/**
+    Helpers
+*/
+@import '~scss/partials/helpers/_mixins.scss';
+
+/**
+    Layout
+*/
+// @import "layout/_header.scss";
+// @import "layout/_footer.scss";
+
+/**
+    Objects
+*/
+@import 'partials/objects/_inputfields.scss';
+@import 'partials/objects/_buttons.scss';
+
+html, body{
+    height: 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    font-family: $ff-cabin-regular;
+}
+
+/**
+    Include mixins here
+*/
+@include set-titles(6);
+
+.section-content{
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    padding-left: 115px;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    .container-content{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+/**
+    Background-image standard styling
+*/
+.bg-image {
+    background-image: url('https://www.placehold.it/350x350');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+
+    &-vertical {
+        background-image: url('https://www.placehold.it/350x1500');
+    }
+
+    &-horizontal {
+        background-image: url('https://www.placehold.it/1500x350');
+    }
+}

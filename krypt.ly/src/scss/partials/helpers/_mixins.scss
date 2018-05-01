@@ -1,0 +1,27 @@
+@import '../variables/_fonts.scss';
+@import '../variables/_colors.scss';
+
+/**
+    Mixin file
+*/
+
+@mixin set-titles($number-of-titles: 6, $font-size: 46px, $font-percentage: 75){
+    @for $i from 1 through $number-of-titles {
+      h#{$i} { 
+          font-family: $ff-cabin-bold;
+          color: $color-fifth;          
+
+          @if $i == 1 {
+              text-transform: capitalize;
+              font-size: $font-size;
+          }
+          @else{
+              $font-size: ($font-size / 100) * $font-percentage;
+              font-size: $font-size;
+          }
+          line-height: $font-size * 1.2;
+          margin-top: $font-size / 2;
+          margin-bottom: $font-size / 2;
+      }
+  }
+}

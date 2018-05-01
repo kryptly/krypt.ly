@@ -1,0 +1,18 @@
+.container-logo{
+    height: 100%;
+    position: relative;
+    text-align: center;
+
+    .img-logo{
+        width: 500px;
+        height: auto;
+        transform-style: preserve-3d;
+        // position: absolute;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
+    }
+}
+.container-buttons{
+    text-align: center;
+}
