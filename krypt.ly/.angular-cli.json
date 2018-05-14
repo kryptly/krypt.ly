@@ -31,7 +31,7 @@
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/desandro-classie/classie.js",
-        "../node_modules/tilt.js/dest/tilt.jquery.min.js",
+        "../node_modules/tilt.js/dest/tilt.jquery.js",
         "./assets/scripts/global.js"
       ],
       "environmentSource": "environments/environment.ts",

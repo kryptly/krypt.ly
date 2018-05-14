@@ -1,0 +1,187 @@
+@import '~scss/partials/variables/_reveal-animations.scss';
+@import '~scss/partials/variables/_colors.scss';
+@import '~scss/partials/helpers/_animations.scss';
+$duration: 300ms;
+$timing-fn: ease;
+$turquoise: #1ABC9C;
+$wet-asphalt: #34495E;
+$midnight-blue: #2C3E50;
+$clouds: #ECF0F1;
+/* the important bits */
+
+.team__member {
+    perspective: 200%;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    &__link {
+        width: 100%;
+        height: 100%;
+        background-color: $clouds;
+        color: transparentize($wet-asphalt, .4);
+        box-shadow: inset 0 2px 20px darken($clouds, 2);
+        text-align: center;
+        font-size: 50px;
+        line-height: 200px;
+        display: block;
+    }
+    &__image {
+        background-image: url("https://placehold.it/500x500");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__info {
+        // hide-initial-state
+        transform: rotate3d(1, 0, 0, 90deg);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 4px;
+        pointer-events: none;
+        background-color: transparentize($color-primary, .1);
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        margin: 0;
+        font-size: 16px;
+        color: transparentize($color-white, .1);
+        line-height: 1.5em;
+    }
+    &__function {
+        font-size: 14px;
+        line-height: 1.5;
+        color: transparentize($color-white, .2);
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    &__description {
+        font-size: 14px;
+        color: transparentize($color-white, .2);
+        line-height: 1.5em;
+        text-align: justify;
+    }
+    &__social {
+        &__list {
+            padding-top: 5px;
+            &item {
+                display: inline-block;
+            }
+        }
+        &__link {
+            display: inline-block;
+            color: $color-white;
+            padding: 10px;
+            line-height: 1em;
+            &:hover {
+                background-color: $color-third;
+            }
+        }
+    }
+    &.in-top .team__member__info {
+        transform-origin: 50% 0%;
+        animation: in-top $duration $timing-fn 0ms 1 forwards;
+    }
+    &.in-right .team__member__info {
+        transform-origin: 100% 0%;
+        animation: in-right $duration $timing-fn 0ms 1 forwards;
+    }
+    &.in-bottom .team__member__info {
+        transform-origin: 50% 100%;
+        animation: in-bottom $duration $timing-fn 0ms 1 forwards;
+    }
+    &.in-left .team__member__info {
+        transform-origin: 0% 0%;
+        animation: in-left $duration $timing-fn 0ms 1 forwards;
+    }
+    &.out-top .team__member__info {
+        transform-origin: 50% 0%;
+        animation: out-top $duration $timing-fn 0ms 1 forwards;
+    }
+    &.out-right .team__member__info {
+        transform-origin: 100% 50%;
+        animation: out-right $duration $timing-fn 0ms 1 forwards;
+    }
+    &.out-bottom .team__member__info {
+        transform-origin: 50% 100%;
+        animation: out-bottom $duration $timing-fn 0ms 1 forwards;
+    }
+    &.out-left .team__member__info {
+        transform-origin: 0% 0%;
+        animation: out-left $duration $timing-fn 0ms 1 forwards;
+    }
+    @keyframes in-top {
+        from {
+            transform: rotate3d(-1, 0, 0, 90deg)
+        }
+        to {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+    }
+    @keyframes in-right {
+        from {
+            transform: rotate3d(0, -1, 0, 90deg)
+        }
+        to {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+    }
+    @keyframes in-bottom {
+        from {
+            transform: rotate3d(1, 0, 0, 90deg)
+        }
+        to {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+    }
+    @keyframes in-left {
+        from {
+            transform: rotate3d(0, 1, 0, 90deg)
+        }
+        to {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+    }
+    @keyframes out-top {
+        from {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+        to {
+            transform: rotate3d(-1, 0, 0, 104deg)
+        }
+    }
+    @keyframes out-right {
+        from {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+        to {
+            transform: rotate3d(0, -1, 0, 104deg)
+        }
+    }
+    @keyframes out-bottom {
+        from {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+        to {
+            transform: rotate3d(1, 0, 0, 104deg)
+        }
+    }
+    @keyframes out-left {
+        from {
+            transform: rotate3d(0, 0, 0, 0deg)
+        }
+        to {
+            transform: rotate3d(0, 1, 0, 104deg)
+        }
+    }
+}

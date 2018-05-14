@@ -1,18 +1,64 @@
-.container-logo{
-    height: 100%;
-    position: relative;
-    text-align: center;
+.section{
+    padding: 50px 0;
+}
 
-    .img-logo{
-        width: 500px;
-        height: auto;
-        transform-style: preserve-3d;
-        // position: absolute;
-        // left: 50%;
-        // top: 50%;
-        // transform: translate(-50%, -50%);
+/**
+    [[ Home first view ]]
+*/
+.section__home{
+    height: 100vh;
+    .container-logo{
+        height: 100%;
+        position: relative;
+        text-align: center;
+    
+        .img-logo{
+            width: 500px;
+            height: auto;
+            transform-style: preserve-3d;
+            // position: absolute;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%);
+        }
+    }
+    .container-buttons{
+        text-align: center;
     }
 }
-.container-buttons{
-    text-align: center;
+
+/**
+    [[ Vision ]]
+*/
+.section__vision{
+    &__title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__image{
+
+    }
+    &__text{
+        text-align: justify;
+    }
+}
+/**
+    [[ Services ]]
+*/
+.section__services{
+    &__title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .card__service{
+        &__image{
+
+        }
+        &__title{
+
+        }
+        &__text{
+            text-align: justify;
+        }
+    }
 }

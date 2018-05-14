@@ -13,13 +13,48 @@
 
 .btn{
     font-size: 1.6rem;
-    padding: 1rem;
+    padding: 1rem 1rem;
+    color: mix($color-white, $color-primary, 40%);
+    $btn-color-dark: mix($color-black, $color-primary, 40%);
+    position: relative;
+    border: 2px solid $color-white;
+    background: none;
+    width: 200px;
+    height: 50px;
+      
+    
+    span {
+      position: absolute;
+      display: block;
+      //@include size(0);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $btn-color-dark;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    
+    &:hover {
+      color: mix($color-white, $color-primary, 75%);
+      
+      span {
+        //@include size(225%, 100*2.25);
+        width: 225px;
+        height: 225px;
+      }
+    }
+    
+    &:active {
+      background-color: $color-primary;
+    }
 
 
-    &__primary{
-        color: $color-white;
-    }
-    &__secondary{
-        color: $color-black;
-    }
+    // &__primary{
+    //     color: $color-white;
+    // }
+    // &__secondary{
+    //     color: $color-black;
+    // }
 }

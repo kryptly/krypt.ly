@@ -2,6 +2,21 @@
 
 // On document ready
 $(function () {
+    triggerContactfields();
+    //triggerTilt();
+});
+
+// // On window loaded
+$(window).on('load', function () {
+    //TODO: Fix this to work when navigating
+    $('.js-tilt').tilt({});
+});
+
+// $(window).on('load resize orientationchange', function(){
+//     //makeSquare(".team__member");
+// });
+
+function triggerContactfields() {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
     if (!String.prototype.trim) {
         (function () {
@@ -23,19 +38,6 @@ $(function () {
         inputEl.addEventListener('focus', onInputFocus);
         inputEl.addEventListener('blur', onInputBlur);
     });
-});
-
-// On window loaded
-$(window).on('load', function() {
-    // triggerContactfields();
-
-    $('.js-tilt').tilt({
-        scale: 1.2
-    })
-});
-
-function triggerContactfields(){
-    
 }
 
 function onInputFocus(ev) {

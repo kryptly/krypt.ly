@@ -14,6 +14,7 @@
     Helpers
 */
 @import '~scss/partials/helpers/_mixins.scss';
+// @import '~scss/partials/helpers/_animations.scss';
 
 /**
     Layout
@@ -28,7 +29,7 @@
 @import 'partials/objects/_buttons.scss';
 
 html, body{
-    height: 100%;
+    min-height: 100%;
 }
 
 html{
@@ -66,10 +67,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
 
-    .container-content{
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+    
 }
 
 /**
@@ -90,4 +88,11 @@ body {
     &-horizontal {
         background-image: url('https://www.placehold.it/1500x350');
     }
+}
+/**
+    [[ Master pages ]]
+*/
+.section__master{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }

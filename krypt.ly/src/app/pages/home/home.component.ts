@@ -14,6 +14,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle(this.pageTitle);
+
+    // On window loaded
+    // window.addEventListener('load', function() {
+    //   document.getElementsByClassName('.js-tilt').tilt({});
+    // })
   }
 
 }

@@ -1,84 +1,98 @@
 <div class="row">
-  <div class="col">
-      <h1>Contact</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col">
-      <div class="bg-image bg-image-vertical"></div>
-  </div>
-  <div class="col">
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">First Name</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">Last Name</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">Lorem ipsum</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">Dolor sit</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">Amet</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <span class="input input--haruki">
-                  <input class="input__field input__field--hoshi" type="text" id="input-1" />
-                  <label class="input__label input__label--hoshi" for="input-1">
-                      <span class="label input__label-content input__label-content--hoshi">Consectetur</span>
-                  </label>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col"></div>
-      </div>
-      <div class="row">
-          <div class="col"></div>
-      </div>
-      <div class="row">
-          <div class="col"></div>
-      </div>
-      <div class="row">
-          <div class="col"></div>
-      </div>
-  </div>
+    <div class="col-12 content-inner">
+        <div class="row">
+            <div class="container container-content">
+                <section class="section section__master">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-image bg-image-vertical"></div>
+                        </div>
+                        <div class="col">
+                            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="input input--haruki">
+                                            <input class="input__field input__field--hoshi" type="text" id="input-1" formControlName="name" />
+                                            <label class="input__label input__label--hoshi" for="input-1">
+                                                <span class="label input__label-content input__label-content--hoshi">Name</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="input input--haruki">
+                                            <input class="input__field input__field--hoshi" type="email" id="input-1" formControlName="email" />
+                                            <label class="input__label input__label--hoshi" for="input-1">
+                                                <span class="label input__label-content input__label-content--hoshi">E-mail</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="input input--haruki">
+                                            <input class="input__field input__field--hoshi" type="text" id="input-1" formControlName="message" />
+                                            <label class="input__label input__label--hoshi" for="input-1">
+                                                <span class="label input__label-content input__label-content--hoshi">Message</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="submit" [disabled]="form.invalid">Submit</button>
+                            </form>
+                            
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <span class="input input--haruki">
+                                        <input class="input__field input__field--hoshi" type="text" id="input-1" />
+                                        <label class="input__label input__label--hoshi" for="input-1">
+                                            <span class="label input__label-content input__label-content--hoshi">Dolor sit</span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="input input--haruki">
+                                        <input class="input__field input__field--hoshi" type="text" id="input-1" />
+                                        <label class="input__label input__label--hoshi" for="input-1">
+                                            <span class="label input__label-content input__label-content--hoshi">Amet</span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="input input--haruki">
+                                        <input class="input__field input__field--hoshi" type="text" id="input-1" />
+                                        <label class="input__label input__label--hoshi" for="input-1">
+                                            <span class="label input__label-content input__label-content--hoshi">Consectetur</span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div> -->
+                            <!-- <div class="row">
+                                <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </div>
